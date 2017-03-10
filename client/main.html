@@ -1,0 +1,19 @@
+<head>
+  <title>itemsdemo</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#each doc in items}}
+    <div>{{doc.name}}</div>
+    {{#each item in doc.items}}
+      <div>
+        <span>Occupation: {{item.occupation}},</span>
+        <span>Description: {{item.description}}</span>
+      </div>  
+    {{/each}}
+  {{/each}}
+</template>
